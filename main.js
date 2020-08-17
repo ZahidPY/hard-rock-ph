@@ -12,7 +12,7 @@
         fetch(`https://api.lyrics.ovh/suggest/${userInputSong}`)
             .then(response => response.json())
             .then(data => {
-                const searchResults = data.data.filter((song, index) => index <= 10)
+                const searchResults = data.data.filter((song, index) => index < 10)
                 if(searchResults == ""){
                     document.getElementById('results').innerHTML = "<h1> No Result </h1>";
                 }else{
