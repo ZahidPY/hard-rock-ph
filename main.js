@@ -1,11 +1,9 @@
     document.getElementById("search").addEventListener('click', event => {
     event.preventDefault()
 
-   
     const userInputSong = document.getElementById('InputSong').value
     if(userInputSong == "") alert("Field can't be Empty!");
     else{
-       
         document.getElementById('results').innerHTML = ''
         document.getElementById('lyrics').innerText = ''
         document.getElementById('songTitle').innerText = ''
@@ -40,7 +38,6 @@
             })
         }
     })
-
 
 
     const getLyrics = (artist, title) => {
